@@ -1,0 +1,253 @@
+.top_vendu {
+  background-color: #f6f6f6;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  width: 73%;
+  .text_top_vendu {
+    width: 30%;
+    padding-top: 50px;
+    @media only screen and (min-width: 1184px) {
+      padding-top: 140px;
+    }
+  }
+  .hr1,
+  .hr2 {
+    display: none;
+  }
+  .livres_top_vendu {
+    width: 70%;
+    display: inline-block;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    border-radius: 20px;
+
+    @media only screen and (min-width: 20px) and (max-width: 1184px) {
+      width: 100%;
+
+      position: relative;
+      margin: auto;
+      width: 90%;
+      padding-left: 6%;
+      .item_toplivre {
+        transform: none;
+        overflow: hidden;
+      }
+
+      .img-top1,
+      .img-top2,
+      .img-top3,
+      .img-top4,
+      .img-top5 {
+        height: 190px;
+        width: 160px;
+        overflow: hidden;
+        padding-left: 20px;
+        // margin-left: 23px;
+        img {
+          overflow: hidden;
+          border-radius: 20px;
+        }
+      }
+    }
+    @media only screen and (min-width: 575px) and (max-width: 871px) {
+      padding-left: 1%;
+    }
+    @media only screen and (min-width: 471px) and (max-width: 575px) {
+      width: 100%;
+      margin-left: 0.5%;
+      padding-left: 14%;
+      .img-top1,
+      .img-top2,
+      .img-top3,
+      .img-top4,
+      .img-top5 {
+        height: 180px;
+        width: 160px;
+        overflow: hidden;
+        padding-left: 10px;
+        // margin-left: 23px;
+      }
+    }
+    @media only screen and (min-width: 409px) and (max-width: 471px) {
+      padding-left: 6%;
+      margin-left: 2%;
+    }
+    @media only screen and (min-width: 404px) and (max-width: 409px) {
+      padding-left: 6%;
+      margin-left: 1%;
+    }
+    @media only screen and (min-width: 390px) and (max-width: 404px) {
+      padding-left: 3%;
+      margin-left: 1%;
+    }
+    @media only screen and (min-width: 0px) and (max-width: 390px) {
+      padding-left: 1%;
+      .img-top1,
+      .img-top2,
+      .img-top3,
+      .img-top4,
+      .img-top5 {
+        padding-left: 10px;
+        // margin-left: 23px;
+      }
+    }
+    // .livres_top_vendu {
+    //   width: 90%;
+    //   padding: relative;
+    //   position: relative;
+    //   margin-left: 9%;
+    //   // padding-right: 20%;
+    //   display: block;
+    //   background-color: blueviolet;
+    //   // padding-right: 16%;
+    //   .item_toplivre {
+    //     .img {
+    //       width: 170px;
+    //     }
+    //   }
+    // }
+  }
+  .decouverte {
+    display: block;
+    margin-top: -60px;
+  }
+  .item_toplivre {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  .img-top {
+    padding-left: 6px;
+    margin-top: 30px;
+    @media only screen and (min-width: 20px) and (max-width: 1184px) {
+      padding-left: 16px;
+    }
+    &:hover {
+      transform: scale(1.2);
+      transition: 2s;
+    }
+  }
+  .img-top1 {
+    @extend .img-top;
+    height: 200px;
+    @media only screen and (min-width: 20px) and (max-width: 1184px) {
+      height: 150px;
+    }
+    // @media only screen and (min-width: 20px) and (max-width: 1184px) {
+    //   width: 200px;
+    // }
+  }
+  .img-top2 {
+    @extend .img-top;
+    height: 185px;
+    // @media only screen and (min-width: 20px) and (max-width: 1184px) {
+    //   width: 200px;
+    // }
+  }
+  .img-top3 {
+    @extend .img-top;
+    height: 175px;
+    // @media only screen and (min-width: 20px) and (max-width: 1184px) {
+    //   width: 200px;
+    //   min-height: 200px;
+    // }
+  }
+  .img-top4 {
+    @extend .img-top;
+    height: 165px;
+    // @media only screen and (min-width: 20px) and (max-width: 1184px) {
+    //   width: 200px;
+    // }
+  }
+  .img-top5 {
+    @extend .img-top;
+    height: 150px;
+    // @media only screen and (min-width: 20px) and (max-width: 1184px) {
+    //   height: 200px;
+    // }
+  }
+  @media only screen and (min-width: 1452px) and (max-width: 1526px) {
+    .text_top_vendu {
+      width: 25%;
+      padding-top: 50px;
+    }
+    // .livres_top_vendu {
+    // }
+  }
+  @media only screen and (min-width: 0) and (max-width: 1000) {
+    .decouverte {
+      display: block;
+    }
+    // margin-left: -100px;
+    font-size: 29px;
+    margin-left: 100px;
+  }
+  @media only screen and (min-width: 1252px) and (max-width: 1452px) {
+    width: 87%;
+  }
+
+  @media only screen and (min-width: 1184px) and (max-width: 1268px) {
+    width: 94%;
+  }
+  @media only screen and (min-width: 20px) and (max-width: 1184px) {
+    width: 100%;
+
+    // padding-right: 10%;
+    .text_top_vendu {
+      width: 100%;
+      background-color: #f6f6f6;
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 20px;
+
+      a {
+        display: none;
+      }
+
+      .hr1 {
+        display: block;
+        border: 3px solid #000000;
+        margin-bottom: 20px;
+        width: 300px;
+      }
+      .hr2 {
+        display: block;
+        border: 2px solid #000000;
+        margin-bottom: 10px;
+        width: 200px;
+      }
+    }
+  }
+  // @media only screen and (min-width: 1430) and (max-width: 1424px) {
+  //   width: 83%;
+  //   .livres_top_vendu {
+  //     .item_toplivre {
+  //       width: 100px;
+  //     }
+  //   }
+  // }
+  // height: 280px;
+  padding-top: 50px;
+  .covertop-vendu {
+    display: inline-block;
+  }
+  .text-top-vendu {
+    text-align: left;
+    display: inline-block;
+    padding-top: 60px;
+    @media only screen and (min-width: 20px) and (max-width: 1184px) {
+    }
+
+    span {
+      padding-top: 120px;
+      font-weight: bold;
+      font-size: 30px;
+    }
+  }
+}
+.row-top-sales-container {
+  display: flex;
+}
