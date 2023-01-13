@@ -6,6 +6,9 @@ Routeur::get ("/",function (){
 Routeur::get ("/home",function (){
     require "Views/index.php";
 });
+Routeur::get ("/index.html",function (){
+    require "Views/index.php";
+});
 
 Routeur::get ("/page-not-found",function (){
     require "Views/404.php";

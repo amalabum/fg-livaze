@@ -17,10 +17,10 @@
       <div class='cover_collection'  style=''>
         <div class='relative_bloc  col-md-5 col-sm-12 col-ms-12'>
      
-           <div class='cover_collection_legende'> C'EST PARTIE !.. </div>
+           <div class='cover_collection_legende'> <h4>  C'EST PARTIE !..</h4> </div>
 
            <div id='collection_cover_title'>             
-                <span class='collection_cover_tile' style='text-transform:capitalize;;'>Laissez-vous guider par les livres <span>
+                <span class='collection_cover_tile' style='text-transform:capitalize;'>Laissez-vous guider par les livres <span>
                 <h3>
                  <p class='p_collection_exttr'>à partir de 4,6$/mois 
                 </h3>
@@ -102,9 +102,9 @@
                     
          
 
-             $recup_categorie= $db->query("SELECT * FROM livres where categorie= $mycategorie ORDER BY id DESC ");
+             $recup_categorie= $db->query("SELECT * FROM livres where categorie=$mycategorie AND collections='etrangere' ORDER BY id DESC ");
              while ($all_datas_l= $recup_categorie->fetch()){
-            $livres_categor[]=$all_datas_l;
+            $livres_etrang_categor[]=$all_datas_l;
      
              }?>
 
@@ -124,11 +124,12 @@
         </div> -->
   
         
-         <?php   
+         <?php
+          
       
 
 
-          if(!empty($livres_categor)){
+          if(!empty($livres_etrang_categor)){
 
 
        echo"  <div class='categorie_title'>
@@ -145,27 +146,25 @@
           </div>
         </div> ";
 
-         foreach ($livres_categor as $livre):  ?>
+       
+
+         foreach ($livres_etrang_categor as $livre):  ?>
         <div class="col-12 row collection_cards ">
           <div class="col-6 col-lg-3">
             <a href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>"><img src="Views/uploads-images/nos_livres/<?php echo $livre['couverture'];?>" alt=""></a>
           </div>
           <div class="col-6 col-lg-9 ">
-           <a style="text-decoration:none;color:#000000;" href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>">  <h5 class="titre_du_livre"><?php echo $livre['titre'] ?></h5></a>
+           <a style="text-decoration:none;color:#000000;text-transform:uppercase;" href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>">  <h5 class="titre_du_livre"><?php echo $livre['titre'] ?></h5></a>
 
             <div class="categorie_span">
               
-              <span> <i>  <?php 
-              $collection=$livre['collections'];
-            
-              $id=$livre['categorie'];
+              <span> <i> <?php  $id=$livre['categorie'];
                             $categorie= $db->query("SELECT designation  FROM categorie WHERE id='".$id."'");  
                             $mycategorie_designation= $categorie->fetch();
                             if(empty( $mycategorie_designation)){
-                              echo " non classé";
+                              echo "non classé";
                             }
                             else{
-                              
 echo  $mycategorie_designation['designation'];
                             } ?> </i></span>
             </div>
@@ -174,15 +173,13 @@ echo  $mycategorie_designation['designation'];
               <?php
        $descript= $livre['synthese'];
 
-echo substr($descript,0,200);
+echo substr($descript,0,100);
 echo "...";
 
 
-$titre=$livre['titre'];
+     $titre=$livre['titre'];
  require "Views/admin/mydash/snipets/ensavoirplus.php";
        ?>
-
-           
 
 
 
@@ -194,11 +191,13 @@ $titre=$livre['titre'];
 
 
           }
-          elseif(empty($livres_categor)){
+          elseif(empty($livres_etrang_categor)){
 
 
-           echo"<h4 style='margin-top:90px;margin-bottom:90px;'> « Désolé, Aucun resultat n'est disponible pour cette catégorie, mais en attendant, ceci pourra peut-être vous interesser...»</h4>";
+         
+           echo"<h4 style='margin-top:50px;margin-bottom:50px;'> « Désolé, Aucun resultat n'est disponible ...»</h4>";
 
+         
           }
 
 ?>
@@ -288,48 +287,6 @@ $titre=$livre['titre'];
 
 
 
-       foreach ($livres as $livre):  ?>
-        <div class="col-12 row collection_cards ">
-          <div class="col-6 col-lg-3">
-            <a href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>"><img src="Views/uploads-images/nos_livres/<?php echo $livre['couverture'];?>" alt=""></a>
-          </div>
-          <div class="col-6 col-lg-9 ">
-           <a style="text-decoration:none;color:#000000;text-transform:uppercase;" href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>">  <h5 class="titre_du_livre"><?php echo $livre['titre'] ?></h5></a>
-
-            <div class="categorie_span">
-              
-              <span> <i> <?php  $id=$livre['categorie'];
-                            $categorie= $db->query("SELECT designation  FROM categorie WHERE id='".$id."'");  
-                            $mycategorie_designation= $categorie->fetch();
-                            if(empty( $mycategorie_designation)){
-                              echo "non classé";
-                            }
-                            else{
-echo  $mycategorie_designation['designation'];
-                            } ?> </i></span>
-            </div>
-            <h6 >Auteur : <?php echo $livre['auteur'] ?></h6>  
-            <p>
-              <?php
-       $descript= $livre['synthese'];
-
-echo substr($descript,0,200);
-echo "...";
-
-
-$titre=$livre['titre'];
- require "Views/admin/mydash/snipets/ensavoirplus.php";
-
-       ?>
-           
-
-
-
-            </p>
-
-          </div>
-        </div>
-        <?php endforeach;
 
 
 
@@ -343,22 +300,7 @@ $titre=$livre['titre'];
         }
 
       }
-      elseif(!isset($_GET['bycategorie']) AND !isset($_GET['bycategoriename'])){
-      
-        if(isset($_GET['bycategorie'])){
-
-        $mycategorie=htmlspecialchars($_GET['bycategorie']);
-
-         echo "<h4>Voir aussi</h4>";
-
-   }
-
- 
-
-
-
-
-   
+       elseif(!isset($_GET['bycategorie']) AND !isset($_GET['bycategoriename'])){
 
 ?>
      <div class="categorie_title mt-3">
@@ -376,27 +318,24 @@ $titre=$livre['titre'];
         </div>
 
      <?php     
-       foreach ($livres as $livre):  ?>
+
+
+
+foreach ($etrange_collections as $livre):  ?>
         <div class="col-12 row collection_cards ">
           <div class="col-6 col-lg-3">
-
-
-
-          
-
             <a href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>"><img src="Views/uploads-images/nos_livres/<?php echo $livre['couverture'];?>" alt=""></a>
-         
-         
-         
-         
-         
           </div>
           <div class="col-6 col-lg-9 ">
-           <a style="text-decoration:none;color:#000000;text-transform:uppercase;" href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>">  <h5 class="titre_du_livre"><?php echo $livre['titre'] ?></h5></a>
+           <a style="text-decoration:none;color:#000000;" href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>">  <h5 class="titre_du_livre"><?php echo $livre['titre'] ?></h5></a>
 
             <div class="categorie_span">
+
+            <?php $collection=$livre['collections']?>
               
-              <span> <i> <?php  $id=$livre['categorie'];
+              <span><?php  if(!empty($collection) AND $collection=='Locale'){
+           echo "Oeuvre congolais , ";
+              } ?> <i>  <?php    $id=$livre['categorie'];
                             $categorie= $db->query("SELECT designation  FROM categorie WHERE id='".$id."'");  
                             $mycategorie_designation= $categorie->fetch();
                             if(empty( $mycategorie_designation)){
@@ -406,20 +345,19 @@ $titre=$livre['titre'];
 echo  $mycategorie_designation['designation'];
                             } ?> </i></span>
             </div>
-            <h6 >Auteur : <?php echo $livre['auteur'] ?></h6> 
+            <h6 >Auteur : <?php echo $livre['auteur'] ?></h6>  
             <p>
               <?php
        $descript= $livre['synthese'];
 
-echo substr($descript,0,200);
+echo substr($descript,0,100);
 echo "...";
 
 $titre=$livre['titre'];
-
  require "Views/admin/mydash/snipets/ensavoirplus.php";
        ?>
-        
-        
+
+
 
             </p>
 
@@ -451,28 +389,17 @@ $titre=$livre['titre'];
          
           <div class="col-12 pub_card">
             <div
-            style="width:150px;font-weight:bold;margin-top:30px;padding-bottom:10px; margin-bottom:20px; border-bottom: 2px solid #e54d4d;text-transform:uppercase;"
+            style="width:90px;font-weight:bold;margin-top:30px;padding-bottom:10px; margin-bottom:20px; border-bottom: 2px solid #e54d4d;"
             >
-              à Ne pas rater</div>
+             Voir aussi</div>
          
-
- <!-- < if($id=$le_livre){
-           echo "bonjour elizer";
-         }
-
-> -->
  <a href="details-livre?livreaconsulter=<?php echo $la_une_lb['id'] ?>"> <img src="Views/uploads-images/nos_livres/<?php echo $la_une_lb['couverture']?>" alt=""></a>
-       
-
-
-
-
-
-</div>
+          </div>
                    <div class="col-12 mt-5 categories_card">
 <h5> Categories </h5>
 
- <?php require "Views/includes/snipet/categorie_list.php";  ?>
+<?php require "Views/includes/snipet/categorie_list.php";  ?>
+
 
           </div>
           
@@ -502,5 +429,9 @@ $titre=$livre['titre'];
 </body>
 
 </html>
+
+
+
+
 
 

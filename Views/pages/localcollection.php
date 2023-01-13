@@ -102,7 +102,7 @@
                     
          
 
-             $recup_categorie= $db->query("SELECT * FROM livres where categorie=$mycategorie AND collections='Locale' ORDER BY id DESC ");
+             $recup_categorie= $db->query("SELECT * FROM livres where categorie=$mycategorie AND collections='locale' ORDER BY id DESC ");
              while ($all_datas_l= $recup_categorie->fetch()){
             $locals_livres_categor[]=$all_datas_l;
      
@@ -145,6 +145,8 @@
             <hr style=>
           </div>
         </div> ";
+
+    
 
          foreach ($locals_livres_categor as $livre):  ?>
         <div class="col-12 row collection_cards ">
@@ -193,7 +195,7 @@ echo "...";
 
 
          
-           echo"<h4 style='margin-top:50px;margin-bottom:50px;'> « Désolé, Aucun resultat n'est disponible pour cette catégorie, mais en attendant, ceci pourra peut-être vous interesser...»</h4>";
+           echo"<h4 style='margin-top:50px;margin-bottom:50px;'> « Désolé, Aucun resultat n'est disponible ...»</h4>";
 
          
           }
@@ -393,7 +395,28 @@ $titre=$livre['titre'];
                    <div class="col-12 mt-5 categories_card">
 <h5> Categories </h5>
 
-<?php require "Views/includes/snipet/categorie_list.php";  ?>
+<ul>
+  
+   <?php foreach ($categories_actif as $categorie):   
+    
+                            $id=$categorie['categorie'];    
+                            $toutes_categorie= $db->query("SELECT *  FROM categorie WHERE id='".$id."'");                                
+                                 while ($all_classed_livre= $toutes_categorie->fetch()){
+                                 $categories_classee[]=$all_classed_livre;     
+                            }
+                          
+    ?>                           
+
+  
+  <?php endforeach;  
+ 
+  foreach ($categories_classee as $categorie_avec_article): 
+  ?>
+   <a  style="font-size:12px;border:none;" class="mes_liens" href="oeuvres-locaux?bycategorie=<?php echo $categorie_avec_article['id']; ?>&bycategoriename=<?php echo $categorie_avec_article['designation']; ?>"> <li><?php echo $categorie_avec_article['designation'] ?></li></button> </a>
+ 
+  <?php endforeach;   ?>
+
+</ul>
 
 
           </div>

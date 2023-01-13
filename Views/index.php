@@ -29,19 +29,24 @@
         </p>
         <a href="packages"><button class=" btn pdg-20 btn-info " style=""> Je me lance</button></a>
       </div> 
-      <div class="livres_top_vendu  justify-content-end ">        
+      <div class="livres_top_vendu  justify-content-end ">   
           
-            <div class="item_toplivre"><img class="img-top1" src="Views/assets/covers/A.png" alt=""
-                height="10px"></div>
-            <div class="item_toplivre"><img class="img-top2" src="Views/assets/covers/E.png" alt="">
-            </div>
-            <div class="item_toplivre"><img class="img-top3" src="Views/uploads-images/livres/topvendu/2.png" alt="">
-            </div>
-            <div class="item_toplivre"><img class="img-top4" src="Views/uploads-images/livres/topvendu/5.png" alt="">
-            </div>
-            <div class="item_toplivre"><img class="img-top5" src="Views/uploads-images/livres/topvendu/6.png" alt="">
-            </div>
+               <?php 
+               $i=1;
+               foreach ($cinq_livres as $livre):
                 
+                
+             
+                ?>
+               
+            <a style="text-decoration:none;color:#000000;" href="details-livre?livreaconsulter=<?php echo $livre['id'] ?>"><div class="item_toplivre"><img class="img-top<?php echo $i++;?>" src="Views/uploads-images/nos_livres/<?php echo $livre['couverture'];?>" alt=""
+                height="10px"></div> </a>
+          
+              <?php 
+               
+            
+               endforeach;
+                     ?>   
       </div>
 
     </div>

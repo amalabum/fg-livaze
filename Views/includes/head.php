@@ -34,11 +34,11 @@
      while ($rlocals_collections= $recup_locals_collections->fetch()){
      $local_collections[]=$rlocals_collections;     
   }
-  $recup_etrng_collections= $db->query("SELECT * FROM livres where collections='etrangere' ORDER BY id DESC ");
-     while ($etrageres_collections= $recup_etrng_collections->fetch()){
-     $collection_etragere[]=$etrageres_collections;     
-  }
   
+     $recup_etrn_collections= $db->query("SELECT * FROM livres where collections='etrangère' ORDER BY id DESC ");
+     while ($etr_collections= $recup_etrn_collections->fetch()){
+     $etrange_collections[]=$etr_collections;     
+  } 
   $la_une= $db->query("SELECT * FROM livres ORDER by id Desc ");  
   $la_une_lb= $la_une->fetch();
   

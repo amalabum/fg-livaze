@@ -28,14 +28,14 @@
 $titre_l=$le_livre['titre'];
 $auteur_l=$le_livre['auteur'];
 
- cover("<span style='font-size: min(max(16px, 40vw), 42px);'>«  $titre_l »<span>","Par, $auteur_l ",'Views/assets/covers/web-cover/2.png');
+ cover("<span style='font-size: min(max(16px, 40vw), 42px);'>« $titre_l »<span>","Par, $auteur_l ",'Views/assets/covers/web-cover/2.png');
      
       	
       
 
 
 ?>
-    <div class="collection  wd-60 row" style="margin-top:0px;">
+    <div class="collection wd-65 row" style="margin-top:0px;">
 
 
  <div class="col-md-9 col-sm-12 col-lg-9 ">
@@ -52,19 +52,22 @@ $auteur_l=$le_livre['auteur'];
            
           </div>
         </div>
-        <div class="col-12 row collection_cards"> 
+        <div class="col-12 row collection_cards "> 
                     
-         <div class="col-4 d-none">
+         <!-- <div class="col-4 d-none">
             <img src="Views/uploads-images/nos_livres/<?php echo $le_livre['couverture'];?>" alt="">
-          </div>
-          <div class="col-12 " style="font-size:1em;">
+          </div> -->
+          <div class="col-12  " style="font-size:1em;">
             
             
               <div class="categorie_span mb-2" style="font-size:19px;">
           
             
             </div>
-             <img style="width:220px !important; float:left; padding-right:25px;padding-bottom:15px" src="Views/uploads-images/nos_livres/<?php echo $le_livre['couverture'];?>" alt=""><p style="text-align:justify" class="Card1Details">
+             <img style="width:220px !important; float:left; padding-right:20px;padding-bottom:15px" src="Views/uploads-images/nos_livres/<?php echo $le_livre['couverture'];?>" alt="">
+             
+             
+             <p style="text-align:justify; padding:0;" class="Card1Details">
                  <span>    Dans la  categorie <i > <?php  $id=$le_livre['categorie'];
                             $categorie= $db->query("SELECT designation  FROM categorie WHERE id='".$id."'");  
                             $mycategorie_designation= $categorie->fetch();
