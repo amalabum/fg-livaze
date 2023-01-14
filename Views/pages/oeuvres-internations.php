@@ -391,7 +391,7 @@ $titre=$livre['titre'];
             <div
             style="width:90px;font-weight:bold;margin-top:30px;padding-bottom:10px; margin-bottom:20px; border-bottom: 2px solid #e54d4d;"
             >
-             Voir aussi</div>
+             PLUS RECENT</div>
          
  <a href="details-livre?livreaconsulter=<?php echo $la_une_lb['id'] ?>"> <img src="Views/uploads-images/nos_livres/<?php echo $la_une_lb['couverture']?>" alt=""></a>
           </div>

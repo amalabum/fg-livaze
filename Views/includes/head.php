@@ -41,6 +41,9 @@
   } 
   $la_une= $db->query("SELECT * FROM livres ORDER by id Desc ");  
   $la_une_lb= $la_une->fetch();
+
+  $a_voir_aussi_li= $db->query("SELECT * FROM livres ");  
+  $a_voir_aussi= $a_voir_aussi_li->fetch();
   
  // recuperation des 5meilleurs livres
      $recup_5_livres= $db->query("SELECT * FROM livres limit 5 ");

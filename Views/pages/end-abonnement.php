@@ -148,11 +148,32 @@
 
 <form action="" method="post">
 
-    <div class="relative_bloc  custum_container justify-content-center col-4 row mt-5 mb-5" style="border:1px solid #F7F7F7 ;">
-     
+    <div class="relative_bloc  custum_container justify-content-center wd-65 row mt-5 mb-5" style="border:1px solid #F7F7F7 ;">
+    
+    
+ <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOG3Zzke_DKp1UOyaG0cQX5d4buecvtrBd9b9vmw08qPdJMQ/viewform?fbclid=IwAR2cof20cCpPHfLZ1vp9YislX421-J2B24P0bnh71C8TtPel4r_40bitMEQ" target="_self" height="3000px" width="100$" name="demo">
+  <p>Votre navigateur ne supporte aucune iframe !</p>
+</iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
       <div class="col-md-12 col-sm-12">
-       
+
         <div class="mb-1">
           <label class="form-label" for="basic-default-fullname">Nom complet <span class="required_input">*</span></label>
           <input value="eliezer dev"  <?php if(isset($_POST['noms'])){ $myvalue=$_POST['noms'];?>value="<?php echo $myvalue ;} ?>"  name ="noms" type="text" class="form-control" id="basic-default-fullname"

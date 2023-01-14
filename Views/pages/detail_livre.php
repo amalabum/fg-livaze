@@ -26,6 +26,7 @@
           
           
 $titre_l=$le_livre['titre'];
+$titre=$le_livre['titre'];
 $auteur_l=$le_livre['auteur'];
 
  cover("<span style='font-size: min(max(16px, 40vw), 42px);'>« $titre_l »<span>","Par, $auteur_l ",'Views/assets/covers/web-cover/2.png');
@@ -55,6 +56,11 @@ $auteur_l=$le_livre['auteur'];
         <div class="col-12 row collection_cards "> 
                     
          <!-- <div class="col-4 d-none">
+
+
+
+
+
             <img src="Views/uploads-images/nos_livres/<?php echo $le_livre['couverture'];?>" alt="">
           </div> -->
           <div class="col-12  " style="font-size:1em;">
@@ -80,7 +86,7 @@ echo  $mycategorie_designation['designation'];
             </p> 
 
  <div class="col-12 lire_plus d-flex justify-content-start" style="margin-left:-10px;">
-                 <a style="" href="https://wa.me/+243993046718?text=Bonjour livraze, je suis  interressé(s) par le livre : <?php echo  "« $titre »";?>, Est-il disponible ?" class=''> J'aimerais lire ce livre</a>
+                 <a style="" href="https://wa.me/+243974242040?text=Bonjour livraze, je suis  interressé(s) par le livre : <?php echo  "« $titre »";?>, Est-il disponible ?" class=''> J'aimerais lire ce livre</a>
 </div>
 
           </div>
@@ -161,10 +167,53 @@ echo  $mycategorie_designation['designation'];
           <div class="nombre_des_livres">
 
             <div class="col-12 pub_card">
-              <div
-                style="width:130px;font-weight:bold;margin-top:30px;padding-bottom:10px; margin-bottom:20px; border-bottom: 2px solid #e54d4d;">
-                PLUS RECENT</div>
-             <a href="details-livre?livreaconsulter=<?php echo $la_une_lb['id'] ?>"> <img src="Views/uploads-images/nos_livres/<?php echo $la_une_lb['couverture']?>" alt=""></a>
+            
+
+       
+        
+        
+        <?php
+       $id_livre=$le_livre['id'];
+       
+      $id_a_la_une=$la_une_lb['id'];
+
+      $couverture_recent=$la_une_lb['couverture'];
+       $couverture_aussi=$a_voir_aussi['couverture'];
+       $voir_id=$a_voir_aussi['id'];
+      
+
+       if($id_livre==$id_a_la_une){
+
+         echo"   <div
+
+                style='width:130px;font-weight:bold;margin-top:30px;padding-bottom:10px; margin-bottom:20px; border-bottom: 2px solid #e54d4d;'>
+                VOIR AUSSI         
+              
+              </div>
+               <a href='details-livre?livreaconsulter=$voir_id'> <img src='Views/uploads-images/nos_livres/$couverture_aussi' alt=''></a>
+              
+              ";
+       }
+       else{
+       echo"<div
+
+                style='width:130px;font-weight:bold;margin-top:30px;padding-bottom:10px; margin-bottom:20px; border-bottom: 2px solid #e54d4d;'>
+                PLUS RECENT       
+              
+              </div>
+               <a href='details-livre?livreaconsulter=$id_a_la_une'> <img src='Views/uploads-images/nos_livres/$couverture_recent' alt=''></a>";
+       }
+        
+        
+        
+        
+        
+        
+        
+        ?>
+
+
+            
           </div>
             <div class="col-12 mt-5 categories_card ">
               <h5> Categories </h5>
