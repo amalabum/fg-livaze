@@ -1,5 +1,5 @@
-<h2 class="mt-5">Nos partenaires</h2>
-<section class="customer-logos slider container mb-5">   
+<h2 class="mt-5 d-none">Nos partenaires</h2>
+<section class="customer-logos slider container mb-5 d-none">   
       <div class="slide"><img src="Views/assets/partenaires/ujn.jpeg"></div>
       <div class="slide"><img src="Views/assets/partenaires/50.png"></div>
       <div class="slide"><img src="Views/assets/partenaires/ulpgl.png"></div>

@@ -34,6 +34,10 @@
      while ($rlocals_collections= $recup_locals_collections->fetch()){
      $local_collections[]=$rlocals_collections;     
   }
+  $recup_locals_collections_for_pagination= $db->query("SELECT * FROM livres where collections='Locale' ORDER BY id DESC ");
+     while ($rlocals_collections_for_pagination= $recup_locals_collections_for_pagination->fetch()){
+     $local_collections_for_pagination[]=$rlocals_collections_for_pagination;     
+  }
   
      $recup_etrn_collections= $db->query("SELECT * FROM livres where collections='etrangère' ORDER BY id DESC ");
      while ($etr_collections= $recup_etrn_collections->fetch()){

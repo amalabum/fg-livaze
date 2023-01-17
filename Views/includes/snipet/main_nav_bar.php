@@ -1,4 +1,4 @@
-<div id="livrazenav">
+<div id="livrazenav" class="">
   <nav class="navbar navbar-expand-lg  ">
     <div class="container-fluid ">
 
@@ -49,7 +49,7 @@
                     Etrangère</a></li>
               </ul>
             </li>
-            <li class="nav-item ">
+            <li class="nav-item d-none">
               <a id="menu_item" class="drop_menu nav-item nav-link" href="">blog </a>
             </li>
          

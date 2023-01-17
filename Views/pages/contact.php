@@ -12,6 +12,7 @@
     
       
       require "Views/includes/snipet/cover.php";
+	  
       cover("Contact","TOUJOURS À VOTRE DISPOSITION",'Views/assets/covers/web-cover/2.png');
 
 ?>

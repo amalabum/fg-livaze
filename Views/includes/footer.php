@@ -4,11 +4,11 @@
     <br>
     <a id="foot_menu" href="oeuvres-locaux"> AUTEUR LOCAUX </a> <span
       class="separator">|</span>
-    <a id="foot_menu" href="javascript:void(0)"> COOCKIES
+    <a class="d-none" id="foot_menu" href="javascript:void(0)"> COOCKIES
       <span class="separator">|</span> <a id="foot_menu"
         href="soiree-litteraire">SOIREE
         LITERAIRE</a> <span class="separator">|</span><a id="foot_menu" href="apropos"> POURQUOI CE PROJET ?</a> <a
-        id="foot_menu" href="contact"> <span class="separator">|</span> CONTACT
+        id="foot_menu" href="contact"> <span class="separator  d-none">| CONTACT</span>
 
   </p>
   Copyright &copy;

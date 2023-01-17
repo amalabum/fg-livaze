@@ -2,6 +2,14 @@
 <html lang="">
 
 <?php
+      // if (isset($_GET['page'])) {
+      //   $page =$_GET['page'];
+      //  }
+      //  else{
+      //   $page =1;
+      //  }
+      //  $number_per_page=03;
+      //  $start_from=($page-1)*03;
  require "Views/includes/head.php";
 
 ?>
@@ -28,63 +36,7 @@
            </div>          
       </div>
      
-      ","
-      
-     <div class='customer-books slider container-fuid  row' style=''>
-     
-      <div class='col-3 slide'>
-          <div class='collectionExtract-cards'>
-        <div class='imagecover'>
-          <img src='Views/assets/covers/E.png' width='100%' alt='Sample Article'>
-        </div>
-        
-      </div>
-      </div>
-      <div class='col-3 slide'>
-          <div class='collectionExtract-cards'>
-        <div class='imagecover'>
-          <img src='Views/uploads-images/livres/topvendu/2.png' width='100%' alt='Sample Article'>
-        </div>
-        
-      </div>
-      </div>
-      <div class='col-3 slide'>
-      <div class='collectionExtract-cards'>
-        <div class='imagecover'>
-          <img src='Views/assets/covers/D.png' width='100%' alt='Sample Article'>
-        </div>
-        
-      </div>
-      </div><div class='col-3 slide'>
-      <div class='collectionExtract-cards'>
-        <div class='imagecover'>
-          <img src='Views/assets/covers/B.png' width='100%' alt='Sample Article'>
-        </div>
-        
-      </div>
-      </div>
-      <div class='col-3 slide'>
-      <div class='collectionExtract-cards'>
-        <div class='imagecover'>
-          <img src='Views/assets/covers/A.png' width='100%' alt='Sample Article'>
-        </div>
-        
-      </div>
-      </div>
-  <div class='col-3 slide'>
-          <div class='collectionExtract-cards'>
-        <div class='imagecover'>
-          <img src='Views/assets/covers/C.png' width='100%' alt='Sample Article'>
-        </div>
-        
-      </div>
-      </div>
-      
-       </div>
-      
-      
-      
-      ",'Views/assets/covers/5.png');
+      "," ",'Views/assets/covers/5.png');
 ?>
     <div class="collection  wd-65 row">
       <div class="col-md-9 col-sm-12 col-lg-8">

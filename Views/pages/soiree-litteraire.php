@@ -142,7 +142,7 @@ body{background:#fafafa}
     </span>
      
     </div>
-   <div class="relative_bloc wd-65 soiree_liter pt-4 mb-5 row" style="margin-top:120px; font-family:Georgia, Times, serif !important;">   
+   <div class="relative_bloc wd-65 soiree_liter pt-4 mb-5 row" style="margin-top:120px; font-family:'Quicksand', sans-serif">   
    
 
           <div class="col-md-12 col-sm-12 col-lg-12 srl_cover">
@@ -158,7 +158,7 @@ body{background:#fafafa}
           <div class="col-md-12 col-sm-12 col-lg-12 srl_details">
             
               <span class="blog-slider__code"> </span>
-        <div class="blog-slider__title" style="font-family:Georgia, Times, serif !important;margin-top:-20px;">Auteur : ANNE BEREST  <br> <h5 style="margin-top:-5px;font-family:Georgia, Times, serif !important;"> romancière dramaturge, scénariste de série et actrice.</h5 style="margin-top:-10px;">Livre : LA CARTA POSTALA </div>  
+        <div class="blog-slider__title" style="margin-top:-20px;">Auteur : ANNE BEREST  <br> <h5 style="margin-top:-5px;"> romancière dramaturge, scénariste de série et actrice.</h5 style="margin-top:-10px;">Livre : LA CARTA POSTALA </div>  
        <div>
               <?php
        $descript="Le mystère de cette carte restera entier jusqu’à ce que 15 ans plus tard Anne Berest se lance dans une longue enquête qui aboutira à ce livre, magnifique et bouleversante immersion dans l’histoire de cette famille décimée pour une partie d’entre elle dans les camps d’extermination.
@@ -183,27 +183,22 @@ echo $descript;
   
   <div class="card-foot row" >
     <div class="col-md-6 col-sm-12  mb-3 col-lg-6 row">
-<div class="col-3"> <img src="Views/assets/covers/fb.png" alt="" ></div> 
+<div class="col-3"> <img src="Views/assets/covers/logo.png" alt="" style="border:1px solid #C8C8C8;" ></div> 
 <div class="col-9">
 <div class="col-12 title pt-1" >
-                Fidel BASHIGE
+                lecture@livraze.com
                 </div>
               <div class="col-12 legende" style="font-size:10px;">+243 (0) 974 242 040 </div>
 
 </div> 
   
   </div>
-    <div class="col-md-6 col-sm-12 mb-3 col-lg-6  justify-cotent-end" s>
-   <a href="#" class="blog-slider__button" style="width:100%;text-decoration:none;color:white;font-family:Georgia, Times, serif !important;">Reserver une place</a>
+    <div class="col-md-6 col-sm-12 mb-3 col-lg-6  justify-cotent-end d-none" >
+   <a href="#" class="blog-slider__button" style="width:100%;text-decoration:none;color:white;font-family:'Quicksand', sans-serif;">Reserver une place</a>
      
     </div>
   </div>
-<!-- <div class="row side1" >              
-              <div class="col-12 title">
-                1ere édition <br>
-                Jeudi 28 janvier 2023</div>
-              <div class="col-12 legende"></div>
-            </div>   -->
+
 
 </div> 
 
@@ -228,7 +223,7 @@ echo $descript;
    </div>
 
 
-<!-- 
+
 <div class="container my-5 col-7">
                     <div class="row">
 <div class='wrapper' style="osition:relative; height:300px;">
@@ -325,7 +320,7 @@ echo $descript;
                                     </p>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
                       </div>
                     </div>
  <?php

@@ -41,107 +41,16 @@
 <body>
   <div id="livraze_app">
 
-    <div id="livrazenav">
-      <nav class="navbar navbar-expand-lg  ">
-        <div class="container-fluid ">
-
-          <a class="navbar-brand" href="home" style="position: absolute;padding-top:20px;"><img
-              src="Views/assets/covers/logo.png" alt="" height="200px"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class=" navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <div style="position:relative;">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 mr-1" style="position:relative;width:100% !important;">
-                <li class="nav-item">
-                <li><a id="menu_item" class="nav-item nav-link" href="home"> Acceuil
-
-                  </a>
-                </li>
-                </li>
-                <li class="nav-item dropdown">
-                  <a id="menu_item" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Soirée litteraire
-                  </a>
-                  <ul class="dropdown-menu" style="border-radius:5px;">
-                    <li><a id="menu_item" class="nav-item nav-link"
-                        style="padding-left:10px; border-bottom:1px solid #C8C8C8;" href="présentation">
-                        Présentation </a></li>
-
-                    <li><a id="menu_item" style="padding-left:10px;"
-                        class="nav-item nav-link" href="soiree-litteraire"> Procahine Soirée</a></li>
-                    <li class="d-none"><a id="menu_item" style="padding-left:10px;width:200px;" class="nav-item nav-link"
-                        href="oeuvres-internationaux">
-                        Soirées Précedentes</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a id="menu_item" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Nos
-                    collections</span>
-                  </a>
-                  <ul class="dropdown-menu" style="border-radius:5px;">
-                    <li class="drop_menu"><a id="menu_item" class="nav-item nav-link"
-                        style="padding-left:10px; " href="oeuvres-locaux">
-                        Locale</a></li>
-
-                    <li><a id="menu_item" class=" drop_menunav-item nav-link" href="oeuvres-internationaux"
-                        style="padding-left:10px;">
-                        Internationale</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item ">
-                  <a id="menu_item" class="drop_menu nav-item nav-link" href=""> </a>
-                </li>
-
-                <li class="nav-item">
-                  <a id="menu_item" style="" class="nav-item nav-link" href="concours"> Concours</a>
-                </li>
-                </li>
-                <li class="nav-item">
-                  <a id="menu_item" class="nav-item nav-link" href="partenaires"> partenaires</a>
-                </li>
-
-                <li class="nav-item">
-                  <a id="menu_item" class="nav-item nav-link" href="contact"> contact </a>
-                </li>
-              </ul>
-            </div>
-            <form class="search" method="get" action="resultats" autocomplete="off">
-              <div class="form-group">
-                <div class="input-group mt-2">
-                  <input type="text" name="keyword" class="form-control" placeholder="Mots clés..."
-                    style="border-radius:40px 0px 0px 40px;">
-                  <div class="input-group-btn">
-                    <button class="btn btn-danger"
-                      style="font-weight:bold;padding-top:10px; width:100px;border-radius:0px 40px 40px 0px;"><i
-                        class="ion-search"></i>
-                      <h6>Chercher</h6>
-                    </button>
-                  </div>
-                </div>
-
-
-
-              </div>
-
-
-            </form>
-          </div>
-        </div>
-      </nav>
-    </div>
+       <?php
+       require "Views/includes/snipet/main_nav_bar.php";
+    ?>
 
 
 
 
     <div id='mycover_container' style='background-image: url(Views/assets/covers/web-cover/2.png);'>
       <div id='mycover_containt' style='background-image: url();'>
-        <h1 id='cover_title'>abonement</h1>
+        <h1 id='cover_title'>abonnement</h1>
         <span>TOUJOURS À VOTRE DISPOSITION</span>
       </div>
     </div>
@@ -151,8 +60,8 @@
     <div class="relative_bloc  custum_container justify-content-center wd-65 row mt-5 mb-5" style="border:1px solid #F7F7F7 ;">
     
     
- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOG3Zzke_DKp1UOyaG0cQX5d4buecvtrBd9b9vmw08qPdJMQ/viewform?fbclid=IwAR2cof20cCpPHfLZ1vp9YislX421-J2B24P0bnh71C8TtPel4r_40bitMEQ" target="_self" height="3000px" width="100$" name="demo">
-  <p>Votre navigateur ne supporte aucune iframe !</p>
+ <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfOG3Zzke_DKp1UOyaG0cQX5d4buecvtrBd9b9vmw08qPdJMQ/viewform?fbclid=IwAR2cof20cCpPHfLZ1vp9YislX421-J2B24P0bnh71C8TtPel4r_40bitMEQ" target="_self" height="2490px" width="100%" name="demo">
+  <p>le formulaire n'est pas disponible pour l'instant veuillez patienter ou revenir ultérieurement</p>
 </iframe>
 
 
@@ -172,7 +81,7 @@
 
 
     
-      <div class="col-md-12 col-sm-12">
+      <div class="col-md-12 col-sm-12 d-none">
 
         <div class="mb-1">
           <label class="form-label" for="basic-default-fullname">Nom complet <span class="required_input">*</span></label>
@@ -255,11 +164,11 @@
 <br>
      <?php require "Views/admin/mydash/cores/new_register.php"; ?>
 
-        <button name="new_member" type="submit" class="btn btn-success nom-residence col-12 mt-0"
+        <button name="new_member" type="submit" class="btn btn-success nom-residence col-12 mt-0 d-none"
           style="">Envoyer</button>
 
 
-      <div class="col-md-12 col-sm-12 mt-12 ">
+      <div class="col-md-12 col-sm-12 mt-12 d-none">
 
           <div class="mb-1">
           <label class="form-label" for="otp">Entrez le code OPT envoyé par sms <span class="required_input">*</span></label>

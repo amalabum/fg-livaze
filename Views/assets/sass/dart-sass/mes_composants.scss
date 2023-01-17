@@ -332,56 +332,67 @@ img:hover {
   position: relative;
   display: flex;
   justify-content: center;
-
-  .our_price {
-    width: 290px;
-    height: auto;
-    margin-left: 10px;
-    position: relative;
-    margin-top: 20px;
-    @media only screen and (max-width: 800px) {
-      margin-left: 0px;
-    }
-    background-color: #fbfbfb;
-    padding: 0em 0em;
-    border-radius: 6px;
-    overflow: hidden;
-    .price_title {
-      position: relative;
-      height: 80px;
-      width: 100%;
-      background-color: #dc3545;
-      display: flex;
-      font-weight: bold;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: #ffffff;
-      font-size: 23px;
-      font-weight: 700 !important;
-    }
-    .description {
-      padding: 20px 10px;
-      text-align: center;
-      position: relative;
-      button {
-        margin-top: 20px;
-      }
-      .price_montant {
-        position: relative;
-        margin-bottom: 20px;
-        margin-top: 20px;
-        font-size: 23px;
-        font-weight: 300;
-      }
-    }
+  @media only screen and (min-width: 800px) {
+    // flex-direction: column;
   }
 }
-#abonnement_description {
-  height: auto;
-  position: relative;
-  min-height: 330px;
-}
+//   .our_price {
+//     width: 290px;
+//     height: auto;
+//     margin-left: 10px;
+//     position: relative;
+//     margin-bottom: 30px;
+
+//     @media only screen and (max-width: 1370px) {
+//       width: 260px;
+//     }
+//     background-color: #fbfbfb;
+//     padding: 0em 0em;
+//     border-radius: 6px;
+//     overflow: hidden;
+//     .price_title {
+//       position: relative;
+//       height: 80px;
+//       width: 100%;
+//       background-color: #dc3545;
+//       display: flex;
+//       font-weight: bold;
+//       align-items: center;
+//       justify-content: center;
+//       font-weight: bold;
+//       color: #ffffff;
+//       font-size: 23px;
+//       font-weight: 700 !important;
+//     }
+//     .description {
+//       padding: 20px 10px;
+//       text-align: center;
+//       position: relative;
+//       button {
+//         margin-top: 20px;
+//       }
+//       .price_montant {
+//         position: relative;
+//         margin-bottom: 20px;
+//         margin-top: 20px;
+//         font-size: 23px;
+//         font-weight: 300;
+//       }
+//     }
+//   }
+// }
+// .middle {
+//   @media only screen and (min-width: 1206px) {
+//     width: 320px;
+//     margin-top: -10px;
+//   }
+// }
+
+// #abonnement_description {
+//   height: auto;
+//   position: relative;
+//   min-height: 330px;
+// }
 .blk {
   background-color: #0f0f0f !important;
   color: #d5d3d3 !important;
@@ -395,18 +406,274 @@ img:hover {
   border: 2px solid #ac757b !important;
   // box-shadow: 3px 1px 8px 0 #ac757b;
 }
-.required_input {
-  color: red;
-  font-size: 17px;
+// .required_input {
+//   color: red;
+//   font-size: 17px;
+// }
+// .mes_liens {
+//   color: #0f0f0f;
+// }
+// .pdg-20 {
+//   padding: 12px 30px;
+//   // border-radius: 3px;
+//   color: #ffffff;
+//   text-decoration: blink;
+//   background-color: rgb(229, 77, 77);
+//   border: none;
+// }
+
+// // nos prix
+
+:root {
+  --red: #763737;
+  --orange: #5e4439;
+  --white: #f6f7f8;
+  --dark: #5b5f6a;
+  --dark-grey: #9ca5ae;
+  --grey: #efefef;
 }
-.mes_liens {
-  color: #0f0f0f;
+
+// *,
+// *:before,
+// *:after {
+//   box-sizing: inherit;
+// }
+
+// // * {
+// //   margin: 0;
+// //   padding: 0;
+// // }
+
+body {
+  background-color: var(--white);
+  min-width: 200px;
 }
-.pdg-20 {
-  padding: 12px 30px;
-  // border-radius: 3px;
-  color: #ffffff;
-  text-decoration: blink;
-  background-color: rgb(229, 77, 77);
-  border: none;
+
+.pricing-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pricing-table h2 {
+  margin: 60px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 20px 0;
+}
+
+.pricing-table .element {
+  border: 1px solid var(--dark-grey);
+  border-radius: 12px;
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.1rem;
+  background-color: var(--white);
+}
+
+.element > * {
+  margin: 20px;
+}
+
+.element:nth-of-type(2) {
+  transform: scale(1.05);
+}
+
+.element .info h3 {
+  font-size: 1.8rem;
+  margin: 10px;
+  text-align: center;
+}
+
+.element .info p {
+  text-align: center;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+.element .price {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.element .period {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: var(--grey);
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: var(--dark);
+}
+
+.element .period label {
+  flex: 1 1 50%;
+  text-align: center;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+}
+
+.element .period label:hover {
+  text-decoration: underline;
+}
+
+.period input[type="radio"] {
+  display: none;
+}
+
+.period input[type="radio"]:checked + label {
+  font-weight: 700;
+  background-color: var(--white);
+  border-radius: 6px;
+}
+
+.element ul {
+  font-size: 1.2rem;
+  list-style-type: none;
+}
+
+.element ul li {
+  margin: 0.5rem;
+}
+
+.element ul li::before {
+  content: url("https://karolnowinski.pl/assets/check-mark.svg");
+  display: inline-block;
+  margin: 0 10px;
+  width: 1em;
+  height: auto;
+}
+
+.element button {
+  border: 0;
+  background-color: var(--white);
+  font-size: 1.2rem;
+  color: var(--dark);
+  border: 1px solid var(--dark);
+  border-radius: 8px;
+  padding: 6px 30px;
+  margin: 10px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.element button:hover {
+  text-decoration: none;
+  box-shadow: 2px 2px 0px var(--dark);
+}
+
+.element button:focus {
+  outline-color: var(--dark);
+}
+
+.active {
+  background: linear-gradient(135deg, var(--red), var(--orange));
+  color: var(--white);
+  border: 1px solid transparent !important;
+}
+
+// responsivité
+
+.active ul li::before {
+  content: url("https://karolnowinski.pl/assets/check-mark-white.svg");
+}
+
+.active button {
+  border-color: transparent;
+}
+
+@media only screen and (max-width: 1500px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+// @media only screen and (max-width: 1080px) {
+//   .container {
+//     flex-direction: column;
+//   }
+
+//   .element {
+//     margin: 20px 0;
+//   }
+
+//   .element:nth-of-type(2) {
+//     transform: scale(1);
+//   }
+
+//   .element ul {
+//     display: flex;
+//     justify-content: space-around;
+//     margin: 0 20px;
+//     text-align: center;
+//     flex-wrap: wrap;
+//   }
+
+//   .period {
+//     flex-wrap: wrap;
+//   }
+// }
+.prix_1 {
+  background: #c8e4ea !important;
+}
+.prix_1:hover {
+  background: #106071 !important;
+  color: #f7f7f7;
+}
+
+.prix_2 {
+  background: #fae4e4 !important;
+}
+.prix_2:hover {
+  background: #e54d4d !important;
+  color: #f7f7f7;
+}
+
+.prix_3 {
+  background: #f7d7d7 !important;
+}
+.prix_3:hover {
+  background: #bb2626 !important;
+  color: #f7f7f7;
+}
+
+.btn_1 {
+  background: #106071 !important;
+  color: #f7f7f7 !important;
+  outline: none;
+}
+.btn_1:hover {
+  background: #c8e4ea !important;
+  color: #106071 !important;
+}
+
+.btn_2 {
+  background: #e54d4d !important;
+  color: #f7f7f7 !important;
+}
+.btn_2:hover {
+  background: #f7d7d7 !important;
+  color: #e54d4d !important;
+}
+
+.btn_3 {
+  background: #bb2626 !important;
+  color: #f7f7f7 !important;
+}
+.btn_3:hover {
+  background: #f7d7d7 !important;
+  color: #bb2626 !important;
 }

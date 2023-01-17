@@ -61,7 +61,7 @@ L'objectif de ce concours est de stimuler le goût de la lecture dans les univer
 <li> Être actif sur WhatsApp pendant toute la durée du concours.</li>
 	</ul>
 </p>
-              <div class="getstart  container-fluid row" style="margin:auto;">
+              <div class="getstart d-none container-fluid row" style="margin:auto;">
 			     <div class="col-md-5 col-sm-12 col-lg-5 je_m_abonne"> <a href="concours-lecture"> Prochain concours  </a></div>
    <div class="col-md-7 col-sm-12 col-lg-7"><p style="display:block;">
     « <i> Les 100 premières cadidatures seront sélectionnées pour passer aux phases des éliminations </i> » </p></div>
@@ -160,7 +160,7 @@ La finale aura lieu dans un hôtel local.
 
 
 </p>
-         <div class="getstart  container-fluid row" style="margin:auto;">
+         <div class="getstart d-none  container-fluid row" style="margin:auto;">
 			     <div class="col-md-5 col-sm-12 col-lg-5 je_m_abonne" > <a href="concours-lecture"> Prochain concours </a></div>
    <div class="col-md-7 col-sm-12 col-lg-7"><p style="display:block;"> « <i> Les 100 premières cadidatures seront sélectionnées pour passer aux phases des éliminations </i> » </p></div>
 

@@ -58,11 +58,11 @@
       <div class="container ">
 
         <div class="row " style=" left:70px;z-index:20000; position:absolute;z-index:;">
-          <div class="col-md-6.5 pos " style=" padding-left 49px;padding-top:90px;color:#C3C3C3; ">
-            <h5 class="mb text-left mb-4" style="font-size:21px;color:#ffffff;">« Puis-je proposer Mes livres à la bibliotheque ? » </h5>
+          <div class="col-md-6.5 pos " style=" padding-left 49px;padding-top:300px;color:#C3C3C3; ">
+            <h4 class="mb text-left mb-4" style="font-size:21px;color:#ffffff;">« Puis-je proposer Mes livres à la bibliothèque ? » </h4>
             <div style="padding-left:20px; margin-top:-20px; margin-bottom:40px;">avec plaisir !</div>
 
-            <button href="contact" class="btn pdg-20"
+            <button href="contact" class="btn btn-danger"
               style="padding:10px 20px;font:weight:bold;">Contacter
               notre équipe </button>
           </div>

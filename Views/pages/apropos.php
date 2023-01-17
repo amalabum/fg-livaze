@@ -17,9 +17,7 @@
 ?>
 
 		<div class="relative_bloc custum_container wd-65 row mt-5" style="font-size:1.2em;" >
-			<div id="caption_way" class="">
-				...
-			</div>
+		
 
     <p>
 			Livraze est une bibliothèque privée de l'agence de communication globale Fidba Graphics. Avec des collections variées dans tous les domaines qui intéressent ses abonnés, la bibliothèque Livraze a marié la compétence des nouvelles technologies dans ses techniques d'approche afin d'encourager les jeunes à lire. 
